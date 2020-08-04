@@ -28,9 +28,22 @@
 	<h3>To do list</h3>
 	<h5>Task:</h5>
 
-	<?php foreach ($task as $key => $value) : ?>
-		<li><strong><?= ucwords($key) . ': ' ?></strong><?= $value ?></li>
-	<?php endforeach ?>
+	<ul>
+		<?php foreach ($task as $key => $value) : ?>
+			<li><strong><?= ucwords($key) . ': ' ?></strong><?= $value ?></li>
+		<?php endforeach ?>
+	</ul>
+	
+	<hr>
+
+	<h3>To do list</h3>
+	<h5>Task:</h5>
+	<ul>
+		<li><strong>Title: </strong> <?= $task['name'] ?></li>
+		<li><strong>Due Date: </strong> <?= $task['due'] ?></li>
+		<li><strong>Responsible: </strong> <?= $task['assigned_to'] ?></li>
+		<li><strong>Status: </strong> <?= $task['completed'] ? 'Completed' : 'Not Completed' ?></li>
+	</ul>
 
 </body>
 </html>
