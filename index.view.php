@@ -40,9 +40,18 @@
 	<h5>Task:</h5>
 	<ul>
 		<li><strong>Title: </strong> <?= $task['name'] ?></li>
+
 		<li><strong>Due Date: </strong> <?= $task['due'] ?></li>
+
 		<li><strong>Responsible: </strong> <?= $task['assigned_to'] ?></li>
-		<li><strong>Status: </strong> <?= $task['completed'] ? 'Completed' : 'Not Completed' ?></li>
+
+		<li><strong>Status: </strong> 
+			<?php if($task['completed']) : ?>
+			<span>Finished</span>
+			<?php else : ?>
+			<span>Not Finished</span>
+			<?php endif ?>
+		</li>
 	</ul>
 
 </body>

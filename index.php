@@ -1,5 +1,7 @@
 <?php
 
+require 'functions.php';
+
 $person = [
     'name'=>'Colt',
     'age'=>28,
@@ -13,9 +15,11 @@ $task = [
     'name' => 'Do homework',
     'due' => 'Tuesday',
     'assigned_to' => 'Jeffrey',
-    'completed' => true
+    'completed' => false
 ];
 
+$animals=['dogs','cats'];
+dd($animals);
 require 'index.view.php';
 
 //htmlspecialchars
