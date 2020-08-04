@@ -21,6 +21,16 @@
 			<li><strong><?= $key . ': ' ?></strong><?= $value ?></li>
 
 		<?php endforeach ?>
-	</ol>
+	</ul>
+
+	<hr>
+
+	<h3>To do list</h3>
+	<h5>Task:</h5>
+
+	<?php foreach ($task as $key => $value) : ?>
+		<li><strong><?= $key . ': ' ?></strong><?= $value ?></li>
+	<?php endforeach ?>
+
 </body>
 </html>

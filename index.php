@@ -13,7 +13,7 @@ $task = [
     'name' => 'Do homework',
     'due' => 'Tuesday',
     'assigned_to' => 'Jeffrey',
-    'completed' => 'false'
+    'completed' => false
 ];
 
 require 'index.view.php';
