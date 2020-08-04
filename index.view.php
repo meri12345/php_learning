@@ -18,7 +18,7 @@
 	<ul>
 		<?php foreach ($person as $key => $value) : ?>
 
-			<li><strong><?= $key . ': ' ?></strong><?= $value ?></li>
+			<li><strong><?= ucwords($key) . ': ' ?></strong><?= $value ?></li>
 
 		<?php endforeach ?>
 	</ul>
@@ -29,7 +29,7 @@
 	<h5>Task:</h5>
 
 	<?php foreach ($task as $key => $value) : ?>
-		<li><strong><?= $key . ': ' ?></strong><?= $value ?></li>
+		<li><strong><?= ucwords($key) . ': ' ?></strong><?= $value ?></li>
 	<?php endforeach ?>
 
 </body>

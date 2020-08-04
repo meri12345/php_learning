@@ -17,3 +17,8 @@ $task = [
 ];
 
 require 'index.view.php';
+
+//htmlspecialchars
+//var_dump
+//die
+//ucwords
