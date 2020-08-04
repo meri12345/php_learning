@@ -15,10 +15,10 @@
 <body>
 	<h1>PHP Learning</h1>
 
-	<ol>
+	<ul>
 		<?php foreach ($person as $key => $value) : ?>
 
-			<li><?= $key . ': ' . $value ?></li>
+			<li><strong><?= $key . ': ' ?></strong><?= $value ?></li>
 
 		<?php endforeach ?>
 	</ol>

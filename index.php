@@ -6,4 +6,6 @@ $person = [
     'city'=>'New York'
 ];
 
+$person['career'] = 'Web developer';
+
 require 'index.view.php';
