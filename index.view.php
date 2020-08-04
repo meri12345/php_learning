@@ -21,6 +21,14 @@
 			<li><strong><?= ucwords($key) . ': ' ?></strong><?= $value ?></li>
 
 		<?php endforeach ?>
+
+		<li><strong>Can enter club?: </strong>
+		<?php if(oldEnough($person)) : ?>
+		true
+		<?php else : ?>
+		false
+		<?php endif ?>
+
 	</ul>
 
 	<hr>

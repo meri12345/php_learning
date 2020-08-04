@@ -19,7 +19,8 @@ $task = [
 ];
 
 $animals=['dogs','cats'];
-dd($animals);
+
+
 require 'index.view.php';
 
 //htmlspecialchars
