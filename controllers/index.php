@@ -41,11 +41,17 @@ class Task{
 
 };
 
-$tasks =[ new Task('Go to grocery'),
+$tasks_unfiltered =[ new Task('Go to grocery'),
         new Task('Do Homework'),
         new Task('Sleep'),
         new Task('Study'),];
 
-$tasks[0]->complete();
+$tasks_unfiltered[0]->complete();
+
+//filter
+$tasks = array_filter($tasks_unfiltered,function ($task){
+    return $task->completed==false;
+});
+
 
 require 'views/index.view.php';
