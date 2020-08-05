@@ -67,7 +67,7 @@
 	<h3>Extract data from class Task objects</h3>
 
 	<ul>
-			<?php foreach ($tasks as $task) : ?>
+			<?php foreach ($tasksDB as $task) : ?>
 				<li>
 				
 					<?php if($task->completed) : ?>
@@ -75,7 +75,6 @@
 
 					<?php else : ?>
 					<?=$task->description?>
-					
 					<?php endif ?>
 
 				</li>
