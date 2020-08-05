@@ -64,7 +64,7 @@
 
 	<hr>
 
-	<h3>Extract data from class Task objects</h3>
+	<h3>Tasks from MySQL</h3>
 
 	<ul>
 			<?php foreach ($tasksDB as $task) : ?>
