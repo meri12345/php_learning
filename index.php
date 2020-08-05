@@ -3,18 +3,11 @@
 require 'functions.php';
 require 'TaskObj.php';
 
-try{
-    $pdo = new PDO ('mysql:host=localhost;dbname=inventory','root','root');
-}
-catch(PDOException $e){
-die($e);
-}
+$pdo = connectToMysql();
 
 
-$statement = $pdo->prepare('select * from todos');
-$statement -> execute();
+$tasksDB = getAllTasks($pdo);
 
-$tasksDB = $statement->fetchAll(PDO::FETCH_CLASS, 'TaskObj');
 $tasksDB[1]->complete();
 
 $person = [
