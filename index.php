@@ -2,13 +2,10 @@
 
 require 'functions.php';
 require 'TaskObj.php';
-require 'database/Connection.php';
-require 'database/QueryBuilder.php';
 
-$pdo = Connection::connect();
     
-$query = new QueryBuilder($pdo);
-$tasksDB=$query->selectAll('todos');
+$query = require 'bootstrap.php';
+$tasksDB=$query->selectAll('todos','TaskObj');
 
 $tasksDB[1]->complete();
 
