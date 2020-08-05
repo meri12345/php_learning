@@ -83,5 +83,10 @@
 			<?php endforeach ?>
 	</ul>
 
+	<h3>Submit your name</h3>
+	<form action="/names" method="POST">
+		<input name="name" type="text">
+		<button type="Submit">Submit</button>
+	</form>
 </body>
 </html>

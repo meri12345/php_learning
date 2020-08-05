@@ -13,4 +13,10 @@ class QueryBuilder{
         $statement -> execute();
         return $statement->fetchAll(PDO::FETCH_CLASS, $intoClass);
     }
+
+    public function insertRow($table,$value){
+        $statement = $this->pdo->prepare("insert into $table (name) values ('$value')");
+        $statement -> execute();
+        return true;
+    }
 }

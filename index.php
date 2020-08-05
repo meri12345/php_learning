@@ -7,11 +7,6 @@ $query = require 'core/bootstrap.php';
 
 $router = new Router;
 require 'routes.php';
-$uri = trim($_SERVER['REQUEST_URI'],'/');
-require $router->direct($uri);
-
-
-//htmlspecialchars
-//var_dump
-//die
-//ucwords
+$uri = trim(parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH),'/');
+$request_type = $_SERVER['REQUEST_METHOD'];
+require $router->direct($uri,$request_type);
