@@ -66,6 +66,8 @@
 
 	<h3>Tasks from MySQL</h3>
 
+	<?php require 'partials/nav.php'?>
+
 	<ul>
 			<?php foreach ($tasksDB as $task) : ?>
 				<li>
